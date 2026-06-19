@@ -23,9 +23,9 @@ const Form = () => {
 
   try {
     const response = await axios.post(
-      "https://workshop-landing-page-fyxl.onrender.com",
-      formData
-    );
+       "https://workshop-landing-page-fyxl.onrender.com/api/enquiry",
+        formData
+   );
 
     setSuccess(response.data.message);
 
@@ -93,20 +93,6 @@ const Form = () => {
             {loading ? "Submitting..." : "Enroll Now"}
           </button>
         </form>
-
-        <footer className="bg-gray-900 text-white py-8 text-center">
-  <h3 className="text-lg font-bold">
-    AI & Robotics Summer Workshop
-  </h3>
-
-  <p className="text-gray-400 mt-2">
-    Inspiring young innovators through AI and Robotics.
-  </p>
-
-  <p className="text-gray-500 text-sm mt-4">
-    © 2026 KidWorkshop. All rights reserved.
-  </p>
-</footer>
 
         {/* Status message */}
         {success && (
