@@ -23,7 +23,7 @@ const Form = () => {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/enquiry",
+      "https://workshop-landing-page-fyxl.onrender.com",
       formData
     );
 
